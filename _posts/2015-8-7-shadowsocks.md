@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Mac下使用ShadowSocks科学上网
+title: MacShadowSocks
 ---
 ## 所需工具
 
