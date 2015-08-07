@@ -3,7 +3,6 @@ layout: post
 title: Ubuntu下静态IP配置方法
 ---
 
-test
 
 ## 图形界面方法
 
