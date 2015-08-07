@@ -1,15 +1,36 @@
 ---
 layout: page
-title: About
+title: 关于
 permalink: /about/
 ---
 
-Some information about you!
+一只在编程道路上缓慢前行的小小蜗牛。
 
-### More Information
+### 个人介绍
 
-A place to include any other types of information that you'd like to include about yourself.
+#### 教育经历
 
-### Contact me
+14/09 至今	**软件工程专业,学术型硕士研究生（首批）** *北京大学*
+
+研究方向：信息安全与软件保障
+
+研究领域：静态代码分析
+    
+主要课程：软件分析技术， 软件设计模式，软件工程前沿专题，高级编译技术
+    
+10/09 - 14/06	**网络工程专业，工科学士学位**	*北京邮电大学*
+    
+主要课程： 数据结构，操作系统，计算机网络，数据库技术，Unix实用编程
+
+#### 获奖经历
+  
+14/06 **北京邮电大学2014届优秀学士学位论文奖**
+
+13/08 **“飞思卡尔”杯全国大学生智能车竞赛创意组二等奖（第4名）**
+
+12/08 **中国机器人大赛暨RoboCup公开赛一等奖（亚军）**
+
+
+### 联系方式
 
 [wangdongwei@pku.edu.cn](mailto:wangdongwei@pku.edu.cn)
