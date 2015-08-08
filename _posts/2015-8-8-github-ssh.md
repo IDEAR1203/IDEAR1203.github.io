@@ -36,7 +36,7 @@ Github的官方教程[Generating SSH keys](https://help.github.com/articles/gene
 
 然而我在实际使用时，居然要求我输入passphrase！这和输入用户名密码有什么区别！当时我的内心简直是崩溃的。一定有解决办法！我又阅读了一遍官方教程，[Error: Agent admitted failure to sign](https://help.github.com/articles/error-agent-admitted-failure-to-sign)这篇文章帮助我解决了问题。
 
-终于没有恼人的用户名密码了！
+终于没有恼人的用户名密码了！😁😁😁
 
 ```
 $ git push origin master
