@@ -46,5 +46,5 @@ Compressing objects: 100% (10/10), done.
 Writing objects: 100% (10/10), 157.48 KiB | 0 bytes/s, done.
 Total 10 (delta 3), reused 0 (delta 0)
 To git@github.com:idear1203/idear1203.github.io.git
-   2472885..ccdf6c7  master -> master``
+   2472885..ccdf6c7  master -> master
 ```
