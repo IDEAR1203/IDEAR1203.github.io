@@ -13,4 +13,4 @@ title: mac下vim补全插件YouCompleteMe安装与使用
 
 ## 使用效果图
 
-![effect]({{ site.baseurl }}/images/YCM/1.png )
+![effect]({{ site.baseurl }}/images/YCM/1.gif)
