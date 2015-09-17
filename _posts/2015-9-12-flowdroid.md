@@ -225,6 +225,8 @@ FlowDroid找到了所有的数据泄漏缺陷，既没有误报，也没有漏�
 
 **IMEI是什么？**
 
+IMEI（International Mobile Equipment Identity，移动设备国际识别码，又称为国际移动设备标识）是手机的唯一识别号码。
+
 主要是将IMEI发送给远端服务器。某些恶意软件通过broadcast receiver来接收数据并通过短信发送，使得其他应用程序可以不经过用户许可就发送短信。
 
 ### 6.4 SecuriBenchMicro
