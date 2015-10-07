@@ -25,13 +25,13 @@ Building FlowDroid From Source。首先从google下载android SDK。然后根据
 
 导入后效果如下图：
 
-![import project]( {{ site.baseurl }}/images/runflowdroid/1.png )
+![import project]( {{ site.baseurl }}/images/run-flowdroid/1.png )
 
 然后，你可以在/soot-infoflow-android/test包下找到对droidBench、insecureBank的Junit测试。例如可以尝试运行`soot.jimple.infoflow.android.test.droidBench.CallbackTests.runTestAnonymousClass1()`方法来测试flowdroid在droidbench上的运行效果。
 
 但运行会报错。1是找不到android sdk，2是找不到droidbench所在目录，3找不到`EasyTaintWrapperSource.txt`。通过查看`soot.jimple.infoflow.android.test.droidBench.JUnitTests.analyzeAPKFile(String, boolean)`方法的源码可以找到我们需要配置两个环境变量：`ANDROID_JARS`和`DROIDBENCH`。前者是android.jar所在的目录，该目录在android sdk下，目录结构大概是`Android/sdk/platforms/android-23/android.jar`这样的。后者是droidbench测试工程集的目录。我是OS X Yosemite系统，在家目录下的`.bash_profile`下做相应配置并使之生效。其他系统的环境变量配置也不难。至于`EasyTaintWrapperSource.txt`文件，我发现soot-infoflow项目中存在这个文件，硬拷贝到soot-infoflow-android工程中的，不知道有没有更好的方法。
 
-![environment]( {{ site.baseurl }}/images/funflowdroid/2.png)
+![environment]( {{ site.baseurl }}/images/run-flowdroid/2.png)
 
 至此，我已经可以运行flowdroid了。
 
