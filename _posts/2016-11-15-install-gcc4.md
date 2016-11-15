@@ -15,4 +15,6 @@ title: Ubuntu16.04安装gcc4.8
  $ sudo apt-get install gcc-4.8 g++-4.8
  ```
 
+ One more thing, **I HATE GCC!**
+
 本文参考[How to fix Genymotion in linux with error `CXXABI_1.3.8′ not found](https://iamjagjeetubhi.wordpress.com/2016/06/30/how-to-fix-genymotion-in-linux-with-error-cxxabi_1-3-8-not-found/)
