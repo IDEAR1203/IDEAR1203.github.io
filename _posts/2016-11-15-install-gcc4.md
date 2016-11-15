@@ -1,6 +1,6 @@
 ---
 layout: post
-title: 安装gcc4
+title: Ubuntu16.04安装gcc4.8
 ---
 
 笔者使用的系统是32位的Ubuntu16.04，默认的gcc版本是gcc 5.4。由于某工具要求的gcc版本是gcc 4.x，因此需要安装gcc 4.x。
