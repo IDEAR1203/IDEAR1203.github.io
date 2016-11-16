@@ -98,11 +98,6 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
     cd ..
     ln -s llconf-0.4.6 llconf
     cd ..
-
-    ./configure --target-list=i386-softmmu --proj-name=tracecap --prefix=$(pwd)/install --disable-gcc-check
-    make clean
-    sudo make
-    sudo make install
     ```
 
 5. 编译并构建temu，产生tracecap插件。
