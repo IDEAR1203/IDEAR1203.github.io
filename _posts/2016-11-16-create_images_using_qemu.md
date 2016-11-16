@@ -30,9 +30,9 @@ title: 使用QEMU创建Ubuntu12.04虚拟机镜像
 2. 加载已有的iso镜像文件。
 
     * `-hda file`，把file作为镜像挂载在到硬盘的第0分区
-    * `-cdrom file` 把file作为镜像挂载到光驱
-    * `-boot d` 设置从光驱启动
-    * `-m megs` 将虚拟机内存大小设置为megs，这里是设置为1.5G（qemu1.0虚拟机内存最大不超过2G）
+    * `-cdrom file`，把file作为镜像挂载到光驱
+    * `-boot d`，设置从光驱启动
+    * `-m megs`，将虚拟机内存大小设置为megs，这里是设置为1.5G（qemu1.0虚拟机内存最大不超过2G）
 
     ```
     $ qemu-system-i386 -hda ubuntu1204-server.qcow2 -cdrom ~/images/ubuntu-12.04.5-server-i386.iso -boot d -m 1536
