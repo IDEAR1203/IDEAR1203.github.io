@@ -1,4 +1,3 @@
-
 ---
 layout: post
 title: 使用QEMU创建Ubuntu12.04虚拟机镜像
