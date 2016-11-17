@@ -62,7 +62,7 @@ $ qemu-system-i386 \
 $ qemu-system-i386 \
     -redir tcp:2222::22 \
     -hda ~/images/ubuntu904-server.qcow2
-    ```
+```
 
 在Host机器上查看端口`2222`是否处于监听状态：
 
