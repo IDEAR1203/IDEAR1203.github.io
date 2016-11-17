@@ -43,7 +43,7 @@ $ sudo apt-get install gcc make
 
 ```
 $ sudo apt-get install openssh-server
-    ```
+```
 
 启动QEMU虚拟机时添加端口重定向参数`hostfwd=tcp::2222-:22`(注意不要漏掉`-`号以及`:`的个数)，将Guest的22端口重定向到Host的2222端口。
 
@@ -54,7 +54,7 @@ $ qemu-system-i386 \
     -device e1000,netdev=user.0 \
     -netdev user,id=user.0,hostfwd=tcp::2222-:22 \
     -hda ~/images/ubuntu904-server.qcow2
-    ```
+```
 
 另一种方式是采用过时的重定向`-redir`参数：
 
@@ -72,13 +72,13 @@ $ netstat -apn | grep 2222
  will not be shown, you would have to be root to see it all.)
 tcp        0      0 0.0.0.0:2222            0.0.0.0:*               LISTEN      23874/qemu-system-i
 unix  3      [ ]         STREAM     CONNECTED     12222    1796/unity-2d-shell
-    ```
+```
 
 然后就可以通过SSH访问本机的2222端口来远程登录Guest机器了。`aaron`是登录Guest机器所使用的用户名。
 
 ```
 $ ssh -p 2222 aaron@localhost
-    ```
+```
 
 ## 加载内核模块
 
