@@ -19,7 +19,7 @@ title: Ubuntu9.04上的那些事
 
 ```
 $ sudo vim /etc/apt/source.list
-:%s/[a-z]\{2}.ubuntu.com/old-releases.ubuntu.com/
+:%s/[a-z]\{2}.archive.ubuntu.com/old-releases.ubuntu.com/
 :%s/security.ubuntu.com/old-releases.ubuntu.com/
 ```
 
