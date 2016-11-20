@@ -49,7 +49,6 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
     cd temu-1.0/
     patch -p0 < ../temu-release2009-gcc4.patch
     ./configure --target-list=i386-softmmu --proj-name=sample_plugin --prefix=$(pwd)/install --disable-gcc-check
-    make
     sudo make
     sudo make install
     ```
