@@ -37,7 +37,7 @@ Building FlowDroid From Source。首先从google下载android SDK。然后根据
 
 除了官方给的一些测试集合，也可以用我们自己写的一些apk来测试flowdroid。例如我将论文里的示例代码进行了完善，并用flowdroid进行了测试。主体代码如下：
 
-```
+```java
 package com.example.wangdongwei.myapplication;
 
 import android.app.Activity;
@@ -111,7 +111,7 @@ public class LeakageApp extends Activity {
 
 然后打包成leakageapp.apk，放在`/soot-infoflow-android/testAPKs`包下。在`/soot-infoflow-android/test/soot/jimple/infoflow/android/test/otherAPKs/OtherAPKTests.java`中写了Junit测试方法：
 
-```
+```java
 @Test
 public void runTest3() throws IOException, XmlPullParserException {
   InfoflowResults res = analyzeAPKFile
@@ -123,7 +123,7 @@ public void runTest3() throws IOException, XmlPullParserException {
 
 方法上右键->Run As->JUnit Test进行单元测试。结果如下：
 
-```
+```bash
 [main] INFO soot.jimple.infoflow.entryPointCreators.AndroidEntryPointCreator - Generated main method:
     public static void dummyMainMethod(java.lang.String[])
     {

@@ -22,7 +22,7 @@ title: 使用QEMU创建Ubuntu12.04虚拟机镜像
 
     下面的命令创建了一个大小为15G的ubuntu1204-server的raw类型的镜像文件。`-f`参数指定镜像文件类型。
 
-    ```
+    ```bash
     $ qemu-img create -f qcow2 ubuntu1204-server.qcow2 15G
     ```
 
@@ -33,7 +33,7 @@ title: 使用QEMU创建Ubuntu12.04虚拟机镜像
     * `-boot d`，设置从光驱启动
     * `-m megs`，将虚拟机内存大小设置为megs，这里是设置为1.5G（qemu1.0虚拟机内存最大不超过2G）
 
-    ```
+    ```bash
     $ qemu-system-i386 -hda ubuntu1204-server.qcow2 -cdrom ~/images/ubuntu-12.04.5-server-i386.iso -boot d -m 1536
     ```
 

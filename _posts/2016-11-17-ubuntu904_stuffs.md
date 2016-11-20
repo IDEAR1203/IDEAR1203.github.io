@@ -17,7 +17,7 @@ title: Ubuntu9.04上的那些事
 
 使用`vim`打开软件源信息文件（建议先备份），并作如下替换：
 
-```
+```bash
 $ sudo vim /etc/apt/source.list
 :%s/[a-z]\{2}.archive.ubuntu.com/old-releases.ubuntu.com/
 :%s/security.ubuntu.com/old-releases.ubuntu.com/
@@ -25,13 +25,13 @@ $ sudo vim /etc/apt/source.list
 
 然后就可以更新软件源了。
 
-```
+```bash
 $ sudo apt-get update
 ```
 
 Ubuntu 9.04 server版本居然不自带`gcc`和`make`。你没有天线，还怎么做朋友。
 
-```
+```bash
 $ sudo apt-get install gcc make
 ```
 
@@ -41,7 +41,7 @@ $ sudo apt-get install gcc make
 
 在GuestOS上安装`openssh-server`。
 
-```
+```bash
 $ sudo apt-get install openssh-server
 ```
 
@@ -49,7 +49,7 @@ $ sudo apt-get install openssh-server
 
 例如，我启动虚拟机的命令如下：
 
-```
+```bash
 $ qemu-system-i386 \
     -device e1000,netdev=user.0 \
     -netdev user,id=user.0,hostfwd=tcp::2222-:22 \
@@ -58,7 +58,7 @@ $ qemu-system-i386 \
 
 另一种方式是采用过时的重定向`-redir`参数：
 
-```
+```bash
 $ qemu-system-i386 \
     -redir tcp:2222::22 \
     -hda ~/images/ubuntu904-server.qcow2
@@ -66,7 +66,7 @@ $ qemu-system-i386 \
 
 在Host机器上查看端口`2222`是否处于监听状态：
 
-```
+```bash
 $ netstat -apn | grep 2222
 (Not all processes could be identified, non-owned process info
  will not be shown, you would have to be root to see it all.)
@@ -76,7 +76,7 @@ unix  3      [ ]         STREAM     CONNECTED     12222    1796/unity-2d-shell
 
 然后就可以通过SSH访问本机的2222端口来远程登录Guest机器了。`aaron`是登录Guest机器所使用的用户名。
 
-```
+```bash
 $ ssh -p 2222 aaron@localhost
 ```
 
@@ -86,13 +86,13 @@ $ ssh -p 2222 aaron@localhost
 
 在Host机器上通过`scp`命令将源文件传递到宿主机器上。
 
-```
+```bash
 $ scp -P 2222 procinfo-ubuntu-hardy.tar.gz aaron@localhost:~
 ```
 
 在远程机器上解压并构建。
 
-```
+```bash
 $ tar -zxvf procinfo-ubuntu-hardy.tar.gz
 $ cd procinfo-ubuntu-hardy/
 $ make
@@ -100,7 +100,7 @@ $ make
 
 `make`抱怨找不到目录：
 
-```
+```bash
 $ make
 make -C /lib/modules/2.6.28-11-server/build M=/home/aaron/procinfo-ubuntu-hardy modules
 make: *** /lib/modules/2.6.28-11-server/build: No such file or directory.  Stop.
@@ -109,13 +109,13 @@ make: *** [all] Error 2
 
 问题发生的原因是没有安装linux内核头文件。
 
-```
+```bash
 $ sudo apt-get install linux-headers-`uname -r`
 ```
 
 重新执行`make`就可以了。
 
-```
+```bash
 $ make
 make -C /lib/modules/2.6.28-11-server/build M=/home/aaron/procinfo-ubuntu-hardy modules
 make[1]: Entering directory `/usr/src/linux-headers-2.6.28-11-server'
@@ -129,6 +129,6 @@ make[1]: Leaving directory `/usr/src/linux-headers-2.6.28-11-server'
 
 然后将该模块(`.ko`文件)加载到内核中。注意，必须以超级管理员root权限加载内核模块。
 
-```
+```bash
 sudo insmod procinfo.ko
 ```

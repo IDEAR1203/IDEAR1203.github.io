@@ -26,7 +26,7 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
 
 1. 安装必要软件
 
-    ```
+    ```bash
     sudo apt-get install g++
     sudo apt-get install libsdl1.2-dev
     sudo apt-get install libssl-dev
@@ -39,7 +39,7 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
 
     补丁文件`temu-release2009-gcc4.patch`可从[TEMU/Tracecap, 64-bit Ubuntu 12.04 build walk-through](https://groups.google.com/forum/#!searchin/bitblaze-users/temu%7Csort:relevance/bitblaze-users/QdoY9l8D-ho/GeX8aY2NHOwJ)找到，下同。这里构建了一个样本工程sample_plugin，来测试工程是否能够通过。
 
-    ```
+    ```bash
     mkdir bitblaze
     cd bitblaze/
     mkdir temu
@@ -70,7 +70,7 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
 
     下载、编译、构建Sleuthkit。
 
-    ```
+    ```bash
     cd shared/
     mv sleuthkit/sleuthkit-2.04.patch .
     rmdir sleuthkit
@@ -86,7 +86,7 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
 
     下载、编译、构建llconf：
 
-    ```
+    ```bash
     wget https://github.com/lipnitsk/llconf/archive/v0.4.6.tar.gz -O llconf-0.4.6.tar.gz
     tar xvzf llconf-0.4.6.tar.gz
     cd llconf-0.4.6/
@@ -100,7 +100,7 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
 
 5. 编译并构建temu，产生tracecap插件。
 
-    ```
+    ```bash
     ./configure --target-list=i386-softmmu --proj-name=tracecap --prefix=$(pwd)/install --disable-gcc-check
     make clean
     sudo make

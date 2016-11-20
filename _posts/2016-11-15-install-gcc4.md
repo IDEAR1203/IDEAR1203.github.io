@@ -7,7 +7,7 @@ title: Ubuntu16.04安装gcc4.8
 
 尝试过从源码编译gcc，耗时巨长，并且容易出错，故而笔者最终抛弃了这种方式，而是采用添加软件源的方式来安装gcc 4.x。
 
-```
+```bash
  $ LD_LIBRARY_PATH=/usr/local/lib/:$LD_LIBRARY_PATH
  $ export LD_LIBRARY_PATH
  $ sudo apt-add-repository ppa:ubuntu-toolchain-r/test

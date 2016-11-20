@@ -5,11 +5,11 @@ title: Virtualbox虚拟硬盘根分区大小调整
 
 参考链接：<http://www.cnblogs.com/anjingshen/p/4887426.html>
 
-### 第一步：扩容虚拟硬盘容量 
+### 第一步：扩容虚拟硬盘容量
 
 通过`VBoxManage list hdds`找到所需扩容的虚拟硬盘的UUID
 
-```
+``` bash
 $ VBoxManage list hdds
 UUID:           5562465c-357e-4cb8-84c4-1e6e25d6943e
 Parent UUID:    base
@@ -83,6 +83,3 @@ Encryption:     disabled
   ![sdaresult]({{site.baseurl}}/images/partition/11.png)
 
 重新启动虚拟机。大功告成！
-
-
-
