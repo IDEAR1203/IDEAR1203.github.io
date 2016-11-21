@@ -18,6 +18,8 @@ title: "论文阅读笔记： FlowDroid: Precise Context, Flow, Field, Object-se
 
 实验结果表明，他们的方法在droidBench上的准确率达到了86%，回召率达到了93%，远胜于商业软件AppScan和Fortify SCA。
 
+<!--more-->
+
 ## 1. 引言
 
 安卓系统在手机市场的占有率已经达到了75%，2013-2014年的增长率为91.5%。随着安卓手机的占有率的提升，安卓系统逐渐成为了个人隐私和信息安全攻击的目标。
@@ -236,13 +238,3 @@ IMEI（International Mobile Equipment Identity，移动设备国际识别码，�
 ### 6.5 与其他工具比较
 
 TrustDroid, LeakMiner, CHEX
-
-
-
-
-
-
-
-
-
-

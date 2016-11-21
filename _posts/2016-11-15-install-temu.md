@@ -3,11 +3,11 @@ layout: post
 title: Ubuntu12.04下的TEMU安装与使用
 ---
 
-本文主要参考[TEMU/Tracecap, 64-bit Ubuntu 12.04 build walk-through](https://groups.google.com/forum/#!searchin/bitblaze-users/temu%7Csort:relevance/bitblaze-users/QdoY9l8D-ho/GeX8aY2NHOwJ)
-
 TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBlaze: Binary Analysis for Computer Security](http://bitblaze.cs.berkeley.edu/)。
 
 安装过程中遇到了好多问题，本文对TEMU安装和使用进行总结，以飨来者。
+
+<!--more-->
 
 ## 实验环境
 
@@ -26,7 +26,7 @@ TEMU是berkeley的二进制分析平台Bitblaze动态分析组件，详见[BitBl
 
 ### 安装必要软件
 
-```bash
+```
 sudo apt-get install g++
 sudo apt-get install libsdl1.2-dev
 sudo apt-get install libssl-dev
@@ -39,7 +39,7 @@ sudo apt-get install binutils-dev
 
 补丁文件`temu-release2009-gcc4.patch`可从[TEMU/Tracecap, 64-bit Ubuntu 12.04 build walk-through](https://groups.google.com/forum/#!searchin/bitblaze-users/temu%7Csort:relevance/bitblaze-users/QdoY9l8D-ho/GeX8aY2NHOwJ)找到，下同。这里构建了一个样本工程sample_plugin，来测试工程是否能够通过。
 
-```bash
+```
 mkdir bitblaze
 cd bitblaze/
 mkdir temu
@@ -55,7 +55,7 @@ sudo make install
 
 下载额外的源码，并将其整合到工程中。
 
-```bash
+```
 cd ..
 wget http://bitblaze.cs.berkeley.edu/release/additional/bitblaze-additional-2010-06.tar.gz
 tar xvzf bitblaze-additional-2010-06.tar.gz
@@ -70,7 +70,7 @@ Tracecap依赖于两个开源组件，Sleuthkit和llconf。
 
 下载、编译、构建Sleuthkit。
 
-```bash
+```
 cd shared/
 mv sleuthkit/sleuthkit-2.04.patch .
 rmdir sleuthkit
@@ -86,7 +86,7 @@ ln -s sleuthkit-2.04 sleuthkit
 
 下载、编译、构建llconf：
 
-```bash
+```
 wget https://github.com/lipnitsk/llconf/archive/v0.4.6.tar.gz -O llconf-0.4.6.tar.gz
 tar xvzf llconf-0.4.6.tar.gz
 cd llconf-0.4.6/
@@ -100,9 +100,13 @@ cd ..
 
 编译并构建temu，产生tracecap插件。
 
-```bash
+```
 ./configure --target-list=i386-softmmu --proj-name=tracecap --prefix=$(pwd)/install --disable-gcc-check
 make clean
 sudo make
 sudo make install
 ```
+
+## 参考资料
+
+1. [TEMU/Tracecap, 64-bit Ubuntu 12.04 build walk-through](https://groups.google.com/forum/#!searchin/bitblaze-users/temu%7Csort:relevance/bitblaze-users/QdoY9l8D-ho/GeX8aY2NHOwJ)

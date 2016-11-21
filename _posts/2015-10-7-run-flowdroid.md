@@ -3,11 +3,11 @@ title: FlowDroid工具的构建与运行
 layout: post
 ---
 
-### 题外话
+今天早上Aaron收到一封邮件，从我的博客联系到我，问我如何运行flowdroid，着实感到开心。这是我博客搭建起来之后第一次有人联系到我，感觉自己可以做一点事情很开心。本文是以我对该邮件的回复为基础加以整理，总结了FlowDroid工具的构建和运行的方法。
 
-今天早上收到一封邮件，从我的博客联系到我，问我如何运行flowdroid，着实感到开心。这是我博客搭建起来之后第一次有人联系到我，感觉自己可以做一点事情很开心。本文是以我对该邮件的回复为基础加以整理的。
+<!--more-->
 
-### 回复邮件正文
+## 回复邮件正文
 
 您好。
 
@@ -229,8 +229,6 @@ Maximum memory consumption: 526.43924 MB
 仔细看一下，该结果是说从findViewById到sendTextMessage的source-sink关系使该程序存在taint的风险。
 
 但其实，对于EditText的对象passwordText,直接调用toString是无法得到其文本内容的（正确方式应该是passwordText.getText().toString()），所以这算不算是一个误报呢？这是我没有搞明白的一个点。
-
-我大约是三周前看的这篇论文，因此叙述会有一些疏漏，敬请谅解。
 
 ### 原始邮件
 

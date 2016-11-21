@@ -37,15 +37,15 @@
 }
 
 .post h1 {
-  margin: 50px 0 35px;
   padding-bottom: 2px;
   font-size: 24px;
-  border-bottom: 1px solid $darkGray;
+  border-bottom: 1px dashed #ccc;
 }
 
 .post h2 {
   margin: 40px 0 25px 0;
   font-size: 22px;
+  border-bottom: 1px dashed #ccc;
 }
 
 .post h3 {

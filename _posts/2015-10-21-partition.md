@@ -9,7 +9,7 @@ title: Virtualbox虚拟硬盘根分区大小调整
 
 通过`VBoxManage list hdds`找到所需扩容的虚拟硬盘的UUID
 
-``` bash
+```
 $ VBoxManage list hdds
 UUID:           5562465c-357e-4cb8-84c4-1e6e25d6943e
 Parent UUID:    base
@@ -38,6 +38,8 @@ Storage format: VDI
 Capacity:       30000 MBytes
 Encryption:     disabled
 ```
+
+<!--more-->
 
 这里以`slave2.vdi`为例。得到其UUID为`0d94b868-0b95-405b-9015-eac85ac65c63`。
 

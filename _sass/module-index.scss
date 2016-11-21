@@ -1,7 +1,7 @@
 @import 'variables';
 
-.post-item.block {
-  padding: 30px;
+.post-item{
+  padding: 20px;
   margin-top: 20px;
   h1{
     font-size: 22px;
@@ -15,7 +15,6 @@
     }
   }
   .read-more {
-    text-transform: uppercase;
     font-size: 15px;
   }
 }

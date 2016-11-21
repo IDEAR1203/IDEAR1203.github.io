@@ -6,7 +6,7 @@
 name: Aaron Moment
 
 # Short bio or description (displayed in the header)
-description: 认真对待每个细节，专注处理每件事情
+description: 忍不住化身一条固执的鱼
 
 # URL of your avatar or profile pic (you could use your GitHub profile pic)
 avatar: https://avatars0.githubusercontent.com/u/7024383?v=1&s=140
@@ -61,6 +61,7 @@ version: v1.2.0
 # Jekyll 3 now only supports Kramdown for Markdown
 markdown: kramdown
 highlighter: rouge
+excerpt_separator: "<!--more-->"
 
 # Set the Sass partials directory, as we're using @imports
 sass:
