@@ -1,17 +1,10 @@
 @import "variables";
 @import "monokai-highlights";
 
-.posts > .post {
-  padding-bottom: 2em;
-  border-bottom: 1px solid $lightGray;
-}
+.post.block {
+  padding: 30px;
+  margin-top: 20px;
 
-.posts > .post:last-child {
-  padding-bottom: 1em;
-  border-bottom: none;
-}
-
-.post {
   blockquote {
     margin: 1.8em .8em;
     border-left: 2px solid $gray;
@@ -24,18 +17,6 @@
   .comments {
     margin-top: 10px;
   }
-}
-
-.wrapper-footer {
-  margin-top: 50px;
-  border-top: 1px solid #ddd;
-  border-bottom: 1px solid #ddd;
-  background-color: $lightGray;
-}
-
-footer {
-  padding: 20px 0;
-  text-align: center;
 }
 
 .post pre {
@@ -59,7 +40,7 @@ footer {
   margin: 50px 0 35px;
   padding-bottom: 2px;
   font-size: 24px;
-  border-bottom: 1px solid #EEE;
+  border-bottom: 1px solid $darkGray;
 }
 
 .post h2 {

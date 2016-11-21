@@ -5,14 +5,14 @@ layout: default
 <div class="container-fluid module-index">
     <div class="posts">
       {% for post in site.posts %}
-      <article class="post-item">
+      <article class="post-item block">
         <h1>
           <a href="{{ site.baseurl }}{{ post.url }}">{{ post.title }}</a>
         </h1>
 
         <div class="entry">{{ post.excerpt }}</div>
 
-        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">阅读全文>></a>
+        <a href="{{ site.baseurl }}{{ post.url }}" class="read-more">阅读更多>></a>
       </article>
       {% endfor %}
     </div>

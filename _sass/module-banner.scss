@@ -1,0 +1,20 @@
+@import 'variables';
+
+.banner{
+  padding: 0px 0 30px;
+  background-color: $gray;
+  .container-fluid{
+    padding: 0 40px;
+    .site-name{
+      font-size: 32px;
+      font-weight: bold;
+      color: white;
+      text-decoration: none;
+    }
+    .site-description{
+      font-size: 15px;
+      color: $lightGray;
+      line-height: 1.4;
+    }
+  }
+}

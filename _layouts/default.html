@@ -9,9 +9,9 @@
       <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
     <![endif]-->
 
-    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
     <link rel="alternate" type="application/rss+xml" title="{{ site.name }} - {{ site.description }}" href="{{ site.baseurl }}/feed.xml" />
     <link rel="stylesheet" href="/assets/lib/bootstrap/3.3.0/css/bootstrap.min.css">
+    <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/style.css" />
 
     <script src="/assets/lib/jquery/jquery-3.1.1.min.js"></script>
 
@@ -19,25 +19,22 @@
   </head>
 
   <body>
-    <div class="wrapper-masthead">
-      <div class="container">
-        <header class="masthead clearfix">
-          <a href="{{ site.baseurl }}/" class="site-avatar"><img src="{{ site.avatar }}" /></a>
-
-          <div class="site-info">
-            <h1 class="site-name"><a href="{{ site.baseurl }}/">{{ site.name }}</a></h1>
-            <p class="site-description">{{ site.description }}</p>
-          </div>
-
-          <nav>
-            <a href="{{ site.baseurl }}/">博文</a>
-            <a href="{{ site.baseurl }}/about">关于我</a>
-          </nav>
-        </header>
+    <div class="module-banner">
+      <div class="banner">
+        <div class="container-fluid">
+          <h1>
+            <a class="site-name" href="/">
+              {{ site.name }}
+            </a>
+          </h1>
+          <p class="site-description">
+          {{ site.description }}
+          </p>
+      </div>
       </div>
     </div>
 
-    <div id="main" role="main" class="container">
+    <div class="container-fluid">
       {{ content }}
     </div>
 

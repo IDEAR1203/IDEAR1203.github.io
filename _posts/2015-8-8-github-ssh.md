@@ -38,7 +38,7 @@ Github的官方教程[Generating SSH keys](https://help.github.com/articles/gene
 
 终于没有恼人的用户名密码了！😁😁😁
 
-```
+```bash
 $ git push origin master
 Counting objects: 18, done.
 Delta compression using up to 8 threads.

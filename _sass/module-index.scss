@@ -1,13 +1,13 @@
 @import 'variables';
 
-.post-item {
-  padding: 10px 0 30px 0;
-  border-bottom: 1px solid $lightGray;
+.post-item.block {
+  padding: 30px;
+  margin-top: 20px;
   h1{
     font-size: 22px;
     line-height: 22px;
     a{
-      font-weight: normal;
+      font-weight: bold;
       color: $darkGray;
       &:hover, &:active, &:focus{
         text-decoration: none;
