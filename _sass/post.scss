@@ -80,3 +80,23 @@
   font-style: italic;
 }
 
+.post table {
+  border-collapse: collapse;
+  margin: 20px 0;
+  padding: 0;
+}
+
+.post table tr th {
+  font-weight: normal;
+  text-align: center;
+}
+
+.post table tr th, .post table tr td {
+  border: 1px solid #ddd;
+  padding: 10px 20px;
+  font-size: 14px;
+}
+
+.post table tbody tr:nth-child(2n-1) {
+  background-color: #F1F1F1;
+}
