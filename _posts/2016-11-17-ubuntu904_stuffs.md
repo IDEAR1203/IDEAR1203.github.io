@@ -140,3 +140,28 @@ make[1]: Leaving directory `/usr/src/linux-headers-2.6.28-11-server'
 ```
 sudo insmod procinfo.ko
 ```
+
+Aaron使用这个内核模块来查看内核信息。查看`/var/log/kern.log`中内核的日志：
+
+```
+$ tail -30 /var/log/kern.log
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.281801]     {  "2.6.28-11-server", /* entry name */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.281853]        0x00000000, 0x00000000, /* hooking address */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.281886]        0xC069A340, /* task struct root */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.281916]        3212, /* size of task_struct */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.281944]        452, /* offset of task_struct list */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.281974]        496, /* offset of pid */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.282000]        460, /* offset of mm */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.282027]        36, /* offset of pgd in mm */
+Nov 21 17:56:11 ubuntu904-i386 kernel: [148710.282055]        792, /* offset of comm */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282082]        16, /* size of comm */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282108]        4, /* offset of vm_start in vma */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282137]        8, /* offset of vm_end in vma */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282165]        12, /* offset of vm_next in vma */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282194]        76, /* offset of vm_file in vma */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282223]        12, /* offset of dentry in file */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282253]        28, /* offset of d_name in dentry */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282282]        96 /* offset of d_iname in dentry */
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282312]     },
+Nov 21 17:56:12 ubuntu904-i386 kernel: [148710.282430] Information module retistered.
+```
