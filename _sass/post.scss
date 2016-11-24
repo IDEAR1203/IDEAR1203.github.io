@@ -6,11 +6,11 @@
   margin-top: 20px;
 
   blockquote {
-    margin: 1.8em .8em;
-    border-left: 2px solid $gray;
-    padding: 0.1em 1em;
+    margin: 10px 0;
+    border-left: 4px solid $gray;
+    padding: 0 0 0 11px;
     color: $gray;
-    font-size: 22px;
+    font-size: 14px;
     font-style: italic;
   }
 
@@ -98,5 +98,5 @@
 }
 
 .post table tbody tr:nth-child(2n-1) {
-  background-color: #F8F8F8;
+  background-color: #F5F5F5;
 }
