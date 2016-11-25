@@ -1,11 +1,9 @@
 @import 'variables';
 
-.post-item{
-  padding: 20px;
+.post{
   margin-top: 20px;
   h1{
-    font-size: 22px;
-    line-height: 22px;
+    font-size: 20px;
     a{
       font-weight: bold;
       color: $darkGray;
