@@ -95,7 +95,7 @@ res10: scala.collection.immutable.NumericRange.Inclusive[scala.math.BigDecimal] 
 
 ### 方法默认值和命名参数列表
 
-`copy`方法允许你在创建`case`类的新实例时，只给出与原对象不同部分的参数.
+`copy`方法允许你在创建`case`类的新实例时，只给出与原对象不同部分的参数。
 
 ```scala
 // test/methodDeclaration.sc
